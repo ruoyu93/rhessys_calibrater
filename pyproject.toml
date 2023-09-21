@@ -2,18 +2,16 @@
 # Mimum requirements for the build system to execute.
 requires = [
     "pandas",
-    "meson==1.2.1",
-    "sklearn"
-    "wheel",
-    "oldest-supported-numpy>=2022.8.16; python_version<'3.12'",
-    "numpy>=1.26.0; python_version>='3.12'",
-    "versioneer[toml]"
+    "hatchling",
+    "scikit-learn",
+    "numpy",
 ]
 
-build-backend = "mesonpy"
+build-backend = "hatchling.build"
 
 [project]
 name = 'rhessys_calibrater'
+version = "0.0.2"
 authors = [{name = "Ruoyu Zhang", email="ruoyuzhang1@gmail.com"}]
 description = 'A package for RHESSys model (https://github.com/RHESSys/RHESSys) calibration using MCMC and k-means clustering'
 readme = 'README.md'
