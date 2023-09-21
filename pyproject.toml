@@ -1,0 +1,32 @@
+[build-system]
+# Mimum requirements for the build system to execute.
+requires = [
+    "pandas",
+    "meson==1.2.1",
+    "sklearn"
+    "wheel",
+    "oldest-supported-numpy>=2022.8.16; python_version<'3.12'",
+    "numpy>=1.26.0; python_version>='3.12'",
+    "versioneer[toml]"
+]
+
+build-backend = "mesonpy"
+
+[project]
+name = 'rhessys_calibrator'
+authors = [{name = "Ruoyu Zhang", email="ruoyuzhang1@gmail.com"}]
+description = 'A package for RHESSys model (https://github.com/RHESSys/RHESSys) calibration using MCMC and k-means clustering'
+readme = 'README.md'
+license = {file = 'LICENSE'}
+requires-python = '>=3.9'
+classifiers = [
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+]
+
+[project.urls]
+homepage = 'https://github.com/ruoyu93/rhessys_calibration'
