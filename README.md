@@ -1,2 +1,5 @@
-# rhessys_calibration
- A python program to perform RHESSys calibration
+# RHESSys calibrater
+ A Python program to perform RHESSys calibration using:
+ - MCMC/GLUE algorithm
+ - K-means clustering
+ 
