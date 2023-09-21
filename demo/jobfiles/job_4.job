@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --partition=standard
+#SBATCH --ntasks=1
+#SBATCH --mem=10gb
+#SBATCH -t 1-12:00:00
+#SBATCH --output=/dev/null
+#SBATCH --error=/dev/null
+#SBATCH --job-name=rs4
+#SBATCH -A lband_group
+module purge
+module load singularity
+cd /Users/royzhang/Documents/GitHub/rhessys_calibration/demo
+/home/rz3jr/RHESSysEastCoast-develop/rhessysEC.7.2 -st 1980 1 1 1 -ed 2005 1 1 1 -b -g -dynRtZoff -BGC_flag -gwtoriparian -t tecfiles/tec_daily_cali.txt -w worldfiles/worldfile_crop -whdr worldfiles/worldfile_crop.hdr -r flows/surfflow.txt flows/subflow.txt -pre output_cali/rhessys4 -gw 0.02619 0.03108 0.07594 -s 15.83263 187.69538 7.89524 -sv 18.65993 27.59385 -svalt 1.02059 1.84236
