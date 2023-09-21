@@ -1,4 +1,4 @@
-from rhessys_utils import rhessys_calibrater
+from rhessys_calibrater import *
 import os
 
 random_seed = 80092   # can be any number

@@ -13,7 +13,7 @@ requires = [
 build-backend = "mesonpy"
 
 [project]
-name = 'rhessys_calibrator'
+name = 'rhessys_calibrater'
 authors = [{name = "Ruoyu Zhang", email="ruoyuzhang1@gmail.com"}]
 description = 'A package for RHESSys model (https://github.com/RHESSys/RHESSys) calibration using MCMC and k-means clustering'
 readme = 'README.md'
@@ -29,4 +29,4 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = 'https://github.com/ruoyu93/rhessys_calibration'
+homepage = 'https://github.com/ruoyu93/rhessys_calibrater'
