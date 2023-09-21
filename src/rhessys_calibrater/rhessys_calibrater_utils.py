@@ -324,7 +324,7 @@ class rhessys_cluster:
                         options,
                         output_dir,
                         output_prefix,
-                         submit='False',
+                         submit=False,
                        allocation='lbandgroup',
                        mem_size='10gb',
                        time='1-10:00:00'):
