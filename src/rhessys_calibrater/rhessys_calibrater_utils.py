@@ -232,7 +232,7 @@ class rhessys_cluster:
         output_len = len(list(set([i.split('_')[0] for i in os.listdir(os.path.join(self.workdir, self.output_folder))])))
 
         if output_len != len(self.analyzing_param):
-            warnings.warn('Found {} parameter sets in csv file but not match {} simulations in output_calibration folder'.format(len(self.analyzing_param, output_len)))
+            warnings.warn('Found {} parameter sets in csv file but not match {} simulations in output_calibration folder'.format(len(self.analyzing_param), output_len)
         else:
             print('Parameter analyzing is ready for:')
             self.param_names = [i for i in self.analyzing_param.columns if i != 'index']
@@ -256,7 +256,7 @@ class rhessys_cluster:
 
         for idx in range(1, len(self.analyzing_param) + 1):
             try:
-                pred = pd.read_csv(f'{self.output_folder}/{self.outputPrefix}{idx}_basin.daily', sep=' ')  # use basin daily file to calibrate
+                pred = pd.read_csv(f'{self.workdir}/{self.output_folder}/{self.outputPrefix}{idx}_basin.daily', sep=' ')  # use basin daily file to calibrate
             except:
                 print(f'Simulation {idx} failed.')
                 continue
